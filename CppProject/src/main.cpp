@@ -1,33 +1,32 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>
+#include <map>
+
 
 int main()
 {
-	//array can hold elements of any type
-	//array do not change size
-	int IDs[] = { 1234, 1334, 1434 };
+	std::map<std::string, int> IDs{ {"Steve", 1234 }, { "Adam", 1334 }, { "Ado", 1434 } }; // key,valeur. 
+	//use the keys instead of index to find a value
+	std::cout << IDs["Steve"] << std::endl;
 
-	//{..} is called initializer list
-	std::vector<int> IDVec = { 1234, 1334, 1434 };
+	IDs["Adam"] = 1544;
+	std::cout << IDs["Adam"] << std::endl;
 
-	
-	std::cout << "this first one of IDs is: " << IDs[0] << std::endl;
-	std::cout << "this first one of IDVec is: " << IDVec[0] << std::endl;
-
-	std::cout << "the last one of IDs is: " << IDs[sizeof(IDs)/sizeof(int) -1] << std::endl;
-	std::cout << "this last one of IDVec is: " << IDVec.back() << std::endl;
-
-	std::cout << "the size of IDs is: " << sizeof(IDs) / sizeof(int) << std::endl;
-	std::cout << "this size of IDVec is: " << IDVec.size() << std::endl;
-  
-	//vector can grow and shrink
-	//grow
-	IDVec.push_back(1534);
-	std::cout << "this last one of IDVec is: " << IDVec.back() << std::endl;
 	//insert
-	IDVec.insert(IDVec.begin()+1, 1134);
-	std::cout << "this first one of IDVec is: " << IDVec.front() << std::endl;
-	std::cout << "this second one of IDVec is: " << IDVec[1] << std::endl;
+	IDs.insert({ "Leon", 1644 });
+	std::cout << IDs["Leon"] << std::endl;
 
-}
+	IDs.erase("Leon"); // this erase erases the Leon key value from the map
+
+	std::cout << "the size of IDs is " << IDs.size() << std::endl;
+
+	std::cout << IDs["Leon"] << std::endl; // this one actually checks if "Leon" exists, if not, it adds a Leon basically doing IDs.insert({"Leon", 0});
+	std::cout << "the size of IDs is " << IDs.size() << std::endl;
+
+	IDs.clear(); //remove every thing
+
+	std::cout << "the size of IDs is " << IDs.size() << std::endl;
+	bool Exists = IDs.find("Leon") != IDs.end();
+	std::cout << Exists << std::endl;                  //La console retourne ici false (car 0=false)
+}     
