@@ -8,7 +8,18 @@ int main()
 
 	float tempreture = 72.6;
 
-	std::cout << msg << " " << age << "the tempreture is: " << tempreture << std::endl;
-	 
-}
+	char characterA = 'A';
+	char charactera = 'a';
 
+	bool lightIsOn = false;
+	bool boolFromNum = true;
+
+	std::cout << msg << " " << age << "the tempreture is: " << tempreture << std::endl;
+
+	std::cout << lightIsOn << std::endl;
+
+	std::cout << boolFromNum << std::endl;
+
+	std::cout << "the size of int is:" << sizeof(int) << std::endl;
+
+}
