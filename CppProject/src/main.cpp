@@ -17,4 +17,17 @@ int main()
 
 	std::cout << "the last one of IDs is: " << IDs[sizeof(IDs)/sizeof(int) -1] << std::endl;
 	std::cout << "this last one of IDVec is: " << IDVec.back() << std::endl;
+
+	std::cout << "the size of IDs is: " << sizeof(IDs) / sizeof(int) << std::endl;
+	std::cout << "this size of IDVec is: " << IDVec.size() << std::endl;
+  
+	//vector can grow and shrink
+	//grow
+	IDVec.push_back(1534);
+	std::cout << "this last one of IDVec is: " << IDVec.back() << std::endl;
+	//insert
+	IDVec.insert(IDVec.begin()+1, 1134);
+	std::cout << "this first one of IDVec is: " << IDVec.front() << std::endl;
+	std::cout << "this second one of IDVec is: " << IDVec[1] << std::endl;
+
 }
