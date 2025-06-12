@@ -18,15 +18,15 @@ int main()
 	std::cout << IDs["Leon"] << std::endl;
 
 	IDs.erase("Leon"); // this erase erases the Leon key value from the map
-
 	std::cout << "the size of IDs is " << IDs.size() << std::endl;
 
 	std::cout << IDs["Leon"] << std::endl; // this one actually checks if "Leon" exists, if not, it adds a Leon basically doing IDs.insert({"Leon", 0});
 	std::cout << "the size of IDs is " << IDs.size() << std::endl;
 
 	IDs.clear(); //remove every thing
-
 	std::cout << "the size of IDs is " << IDs.size() << std::endl;
+
+	// ==. != are operators, ther are others operators : + - / * etc
 	bool Exists = IDs.find("Leon") != IDs.end();
 	std::cout << Exists << std::endl;                  //La console retourne ici false (car 0=false)
 }     
