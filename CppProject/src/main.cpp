@@ -13,12 +13,11 @@ int main()
 	std::cin.clear(); // to clear the error tell the buffer that everithing is okay
 	std::cin.ignore(10000000, '\n'); // ignore the next 10000000 amount of characters or until hit a new line
 	
-	std::string firstName;
-	std::string lastName;
+	std::string name ;
 	std::cout << "what is your name: " << std::endl;
-	std::cin >> firstName;
-	std::cin >> lastName;
+	std::getline(std::cin, name);
 
-	std::cout << "hello " << age << " years old " << firstName << " " << lastName << std::endl;
+
+	std::cout << "hello " << age << " years old " << name << std::endl;
 }    
 
