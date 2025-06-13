@@ -6,27 +6,44 @@
 
 int main()
 {
-	std::map<std::string, int> IDs{ {"Steve", 1234 }, { "Adam", 1334 }, { "Ado", 1434 } }; // key,valeur. 
-	//use the keys instead of index to find a value
-	std::cout << IDs["Steve"] << std::endl;
+	//Arithmetic Operators 
+	//+,-, * , /, %
+	float a = 10;
+	float b = 10;
 
-	IDs["Adam"] = 1544;
-	std::cout << IDs["Adam"] << std::endl;
+	float c = a + b;
+	float d = a - b;
+	float e = a * b;
+	float f = a / b;
 
-	//insert
-	IDs.insert({ "Leon", 1644 });
-	std::cout << IDs["Leon"] << std::endl;
+	int g = 0.6; // assignement operator, if assign float to int, you lose precision, anything after the . will be descarded.
 
-	IDs.erase("Leon"); // this erase erases the Leon key value from the map
-	std::cout << "the size of IDs is " << IDs.size() << std::endl;
+	//float h = a % b; // gives the reminder
 
-	std::cout << IDs["Leon"] << std::endl; // this one actually checks if "Leon" exists, if not, it adds a Leon basically doing IDs.insert({"Leon", 0});
-	std::cout << "the size of IDs is " << IDs.size() << std::endl;
+	a += b; // the same as a = a + b;
+	a -= b; // the same as a = a - b
 
-	IDs.clear(); //remove every thing
-	std::cout << "the size of IDs is " << IDs.size() << std::endl;
+	a /= b;
+	a *= b;
 
-	// ==. != are operators, ther are others operators : + - / * etc
-	bool Exists = IDs.find("Leon") != IDs.end();
-	std::cout << Exists << std::endl;                  //La console retourne ici false (car 0=false)
-}     
+	a++;
+	int h = --a; // the same as a-=1; or a = a + 1;
+	std::cout << h << std::endl;
+
+	++a; // the same as a+=1; or a = a + 1;
+	--a; // the same as a-=1; or a = a - 1;
+
+
+   bool aEqualb = a == b; // comparison
+   bool aNotEqualb = a != b; // comparison
+   bool aSmallerThanb = a <= b;
+   bool aBiggerThanb = a >= b;
+
+   bool bothTrue = aEqualb && aNotEqualb; //both has to be true ti be returning true.
+   bool eitherTrue = (aEqualb || aBiggerThanb) && aNotEqualb; // any trye will return true ; will be false if both are false. 
+
+   std::cout << eitherTrue << std::endl;
+
+
+}    
+
