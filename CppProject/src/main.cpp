@@ -7,18 +7,21 @@
 
 int main()
 {
-	int age;
-	std::cout << "please type in your age: " << std::endl;
-	std::cin >> age;                            // cin permet de rentrer des input
+	//get the sum of the numbers from 1 to 100
+	int sum = 0;
 
-	std::cin.clear(); // to clear the error tell the buffer that everithing is okay
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // ignore the next 10000000 amount of characters or until hit a new line
-	
-	std::string name ;
-	std::cout << "what is your name: " << std::endl;
-	std::getline(std::cin, name);
+	//for loops keeps looping, or keep calling the code in the {} again and again until the condition is false
+	//three things is used in the () of the for loop, divided by the 2;
+	// (initialization ; condiiton; incrementation)
+	//initialization is called once in the begining of the for loop.
+	//condition is checked at the begining of each loop
+	//incrementation is called at the end of each loop
+	for (int i = 0; i <= 100; i++)
+	{
+		sum += i;
+	}
 
+	std::cout << sum << std::endl;
 
-	std::cout << "hello " << age << " years old " << name << std::endl;
-}    
+}
 
