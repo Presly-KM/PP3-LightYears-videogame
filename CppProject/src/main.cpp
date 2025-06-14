@@ -7,21 +7,12 @@
 
 int main()
 {
-	//get the sum of the numbers from 1 to 100
-	int sum = 0;
+	int ids[6] = {1,2,3,4,5};
 
-	//for loops keeps looping, or keep calling the code in the {} again and again until the condition is false
-	//three things is used in the () of the for loop, divided by the 2;
-	// (initialization ; condiiton; incrementation)
-	//initialization is called once in the begining of the for loop.
-	//condition is checked at the begining of each loop
-	//incrementation is called at the end of each loop
-	for (int i = 0; i <= 100; i++)
-	{
-		sum += i;
-	}
-
-	std::cout << sum << std::endl;
-
+	//the same as for(int i = 0; i < .. ; i++)
+	for (int item : ids)   // For every item in the array we're printing out item  --> engros le code ci contre equivaut a une loop sur le tableau ci dessus. On affiche ici un par un les éléments du tableau. Probleme est que c'est imprécis car ne prend par en compte les index comme un for loop conventionnem 
+	{ 
+	   std::cout << item << std::endl;
+     }
 }
 
