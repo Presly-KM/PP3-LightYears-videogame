@@ -3,6 +3,7 @@
 #include <vector>
 #include <map>
 #include <string>
+#include <limits>
 
 int main()
 {
@@ -11,7 +12,7 @@ int main()
 	std::cin >> age;                            // cin permet de rentrer des input
 
 	std::cin.clear(); // to clear the error tell the buffer that everithing is okay
-	std::cin.ignore(10000000, '\n'); // ignore the next 10000000 amount of characters or until hit a new line
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // ignore the next 10000000 amount of characters or until hit a new line
 	
 	std::string name ;
 	std::cout << "what is your name: " << std::endl;
