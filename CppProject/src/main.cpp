@@ -22,11 +22,16 @@ int main()
 		//std::cout << item << std::endl;                         // Il indique ici 1,2,3,4,5,0 ! En effet n'oublions pas que ids indique ici 6 éléments au sein du tableau (int ids[6])
 	}
 
-
-	std::vector<int> idsVec = { 1,2,3,4,5, };
-	for (int i = 0; i < idsVec.size(); i++)
+	// vector type gives error for "off by one" problem if we put "<=" to prevent that problem we put "<" operator
+	std::vector<int> idsVec = { 1,2,3,4,5 };
+	for (int i = 0; i < idsVec.size(); i++)                       
 	{
-		std::cout << idsVec[i] << std::endl;
+		//std::cout << idsVec[i] << std::endl;                      // Il indique ici 1,2,3,4,5 ! L'incrémentation se fait le plus facilement posisble sans probleme d'index. Pas de problème ici non plus ; Trés simple ! 
 	}
 
+
+	for (int item : idsVec)
+	{
+		std::cout << item << std::endl;                             // Ici aussi pas de probleme : 1,2,3,4,5
+	}
 }
