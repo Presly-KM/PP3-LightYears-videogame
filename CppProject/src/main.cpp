@@ -15,8 +15,18 @@ int main()
 
 	//the same as for(int i = 0; i < sizeof(ids) / sizeof(int); i++)
 	//{std::cout << ids[i] << std::endl;}
+	// Down size of this is that the index is not here.
+	// this is called a foreach
 	for (int item : ids)                                        // autre manière d'incrementer sans les problemes  d'index et de off by one
 	{
-		std::cout << item << std::endl;                         // Il indique ici 1,2,3,4,5,0 ! En effet n'oublions pas que ids indique ici 6 éléments au sein du tableau (int ids[6])
+		//std::cout << item << std::endl;                         // Il indique ici 1,2,3,4,5,0 ! En effet n'oublions pas que ids indique ici 6 éléments au sein du tableau (int ids[6])
 	}
+
+
+	std::vector<int> idsVec = { 1,2,3,4,5, };
+	for (int i = 0; i < idsVec.size(); i++)
+	{
+		std::cout << idsVec[i] << std::endl;
+	}
+
 }
