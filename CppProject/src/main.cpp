@@ -9,9 +9,10 @@ int main()
 {
 	enum Mood
 	  {
-		Happy,
-		Angry,
-		Sad
+		// enum are basically named integers
+		Happy,   // defaults to 0
+		Angry,   // defaults to the prebious one + 1
+		Sad      // same...
 	  };
 
 	//creat a variable of the enum type Mood, and git it a value of Happy                 // Donc enum a la capacité de créer des types tout comme int est un type, tout comme char, tout comme float etc
