@@ -10,9 +10,9 @@ int main()
 	enum Mood
 	  {
 		// enum are basically named integers
-		Happy,   // defaults to 0
-		Angry,   // defaults to the prebious one + 1
-		Sad      // same...
+		Happy= - 1,  // defaults to 0
+		Angry= -2,  // defaults to the prebious one + 1
+		Sad = 100    // same...
 	  };
 
 	//creat a variable of the enum type Mood, and git it a value of Happy                 // Donc enum a la capacité de créer des types tout comme int est un type, tout comme char, tout comme float etc
@@ -20,7 +20,9 @@ int main()
 
 	int moodInInt = mood;
 
-	switch (moodInInt)
+	Mood moodFromInt = (Mood)-1;
+	
+	switch (moodFromInt)
 	{
 	case Happy:
 		std::cout << "Happy" << std::endl;
