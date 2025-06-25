@@ -7,38 +7,29 @@
 
 int main()
 {
-	int age = 12;
+	enum Mood
+	  {
+		Happy,
+		Angry,
+		Sad
+	  };
 
-/*	if (age == 6)
-	{
-		std::cout << "go to elementary school" << std::endl;
-	}
-	else if (age == 12)
-	{
-		std::cout << "go to middle school" << std::endl;
-	}
-	else if (age == 15)
-	{
-		std::cout << "go to high school" << std::endl;
-	}
-	else
-	{
-		std::cout << "stay at your school" << std::endl;
-	}
-	*/
+	//creat a variable of the enum type Mood, and git it a value of Happy                 // Donc enum a la capacité de créer des types tout comme int est un type, tout comme char, tout comme float etc
+	Mood mood = Happy;
 
-	switch (age)
+	switch (mood)
 	{
-	case 6:
-		std::cout << "go to elementary school" << std::endl;
+	case Happy:
+		std::cout << "Happy" << std::endl;
 		break;
-	case 12:
-		std::cout << "go to middle school" << std::endl;
+	case Angry:
+		std::cout << "Angry" << std::endl;
 		break;
-	case 15:
-		std::cout << "go to high school" << std::endl;
+    case Sad:
+		std::cout << "Sad" << std::endl;
 		break;
 	default:
-	 	std::cout << "stay at your school" << std::endl;
+		std::cout << "no mood" << std::endl;
+		break;
 	}
 } 
