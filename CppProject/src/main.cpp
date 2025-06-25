@@ -18,7 +18,9 @@ int main()
 	//creat a variable of the enum type Mood, and git it a value of Happy                 // Donc enum a la capacité de créer des types tout comme int est un type, tout comme char, tout comme float etc
 	Mood mood = Happy;
 
-	switch (mood)
+	int moodInInt = mood;
+
+	switch (moodInInt)
 	{
 	case Happy:
 		std::cout << "Happy" << std::endl;
