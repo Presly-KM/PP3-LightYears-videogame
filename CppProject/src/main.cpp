@@ -6,16 +6,39 @@
 #include <limits>
 
 int main()
-{ 
-	int i = 0;
-  while (i < 10)
-{ 
-	std::cout << i << std::endl;
-	i++;
-}  // the same as for (int i = 0; i < 10; i++)
-  //while (condition) is the same as for(;condition;)
-  do {
-	  std::cout << i << std::endl;
-	  i++;
-  } while (i < 10);
-} // "do while" will do the code in the {} at least once before checking the conditions
+{
+	int age = 12;
+
+/*	if (age == 6)
+	{
+		std::cout << "go to elementary school" << std::endl;
+	}
+	else if (age == 12)
+	{
+		std::cout << "go to middle school" << std::endl;
+	}
+	else if (age == 15)
+	{
+		std::cout << "go to high school" << std::endl;
+	}
+	else
+	{
+		std::cout << "stay at your school" << std::endl;
+	}
+	*/
+
+	switch (age)
+	{
+	case 6:
+		std::cout << "go to elementary school" << std::endl;
+		break;
+	case 12:
+		std::cout << "go to middle school" << std::endl;
+		break;
+	case 15:
+		std::cout << "go to high school" << std::endl;
+		break;
+	default:
+	 	std::cout << "stay at your school" << std::endl;
+	}
+} 
