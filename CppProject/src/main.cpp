@@ -16,7 +16,7 @@ int main()
 	  };
 
 	//creat a variable of the enum type Mood, and git it a value of Happy                 // Donc enum a la capacité de créer des types tout comme int est un type, tout comme char, tout comme float etc
-	Mood mood = Mood::Happy;           // Nous avons modifié enum Mood (ligne 11) pour qu'il devienne enum class Mood cela aimplqiue qu'il devint un "strong enum type" et plus simplement un "enum type". Ce changement implique que désormais la valeur de Mood mood ne peut plus simplement etre "Happy" ou "Angry" ou "Sad", on maintenant dire  Mood::Happy;  
+	Mood mood = Mood::Happy;           // Nous avons modifié enum Mood (ligne 11) pour qu'il devienne enum class Mood cela aimplqiue qu'il devint un "strong enum type" et plus simplement un "enum type". Ce changement implique que désormais la valeur de Mood mood ne peut plus simplement etre "Happy" ou "Angry" ou "Sad", on maintenant dire  Mood::Happy;   C'est comme si désormais on disait j'ai besoin de la partie "Happy" qui se trouve dans Mood. Plus seulement j'ai besoin de Happy
 
 	int moodInInt = mood;
 
