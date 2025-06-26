@@ -13,8 +13,12 @@ int main()
 	 
 
 	// const mean that the value is not changeable. It is set to the value you give it.
-	const int conversion = 1.609344;
+	const float CONVERSION = 1.609344;
 
-	c
+	std::cout << "Please type in the distance in Miles : \n>>>";
+	
+	float miles;
+	std::cin >> miles;
 
+	std::cout << "The distance in kilometers is: " << miles * CONVERSION << std::endl;
 } 
