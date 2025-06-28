@@ -12,6 +12,20 @@ void printHelloWord()
 	printMsg("hello world!", true);
 }
 
+std::vector<int> generateRandomNumbers()  // Le "std::vector<int>" au lieu du "void" habituel devant le nom de la fonction signifie que la focntion ci-contre va retourner un vecteur (vector)
+{
+	std::vector<int> randomNumbers;
+
+	std::srand(std::time(nullptr));
+
+	for (int i = 0; i < 12; ++i)
+	{
+		int number = std::rand() % 100 - 50;
+		randomNumbers.push_back(number);
+		std::cout << number << " ";
+	}
+}
+
 void printMsg(std::string msg, bool newLine)  // the signature of a function
 {
 	std::cout << msg;
@@ -20,6 +34,8 @@ void printMsg(std::string msg, bool newLine)  // the signature of a function
 		std::cout << std::endl;
 	}
 }
+
+
 
 
 
