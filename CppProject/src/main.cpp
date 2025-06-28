@@ -9,7 +9,7 @@
 void printHelloWord()
 {
 	//body of the function
-	std::cout << "hello world" << std::endl;
+	printMsg("hello world!", true);
 }
 
 void printMsg(std::string msg, bool newLine)  // the signature of a function
