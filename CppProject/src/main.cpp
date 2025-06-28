@@ -24,6 +24,8 @@ std::vector<int> generateRandomNumbers()  // Le "std::vector<int>" au lieu du "v
 		randomNumbers.push_back(number);
 		std::cout << number << " ";
 	}
+
+	return randomNumbers;
 }
 
 void printMsg(std::string msg, bool newLine)  // the signature of a function
