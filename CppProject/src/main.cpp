@@ -12,7 +12,7 @@ void printHelloWord()
 	printMsg("hello world!", true);
 }
 
-std::vector<int> generateRandomNumbers()  // Le "std::vector<int>" au lieu du "void" habituel devant le nom de la fonction signifie que la focntion ci-contre va retourner un vecteur (vector)
+std::vector<int> generateRandomNumbers(int numberofNumbers)  // Le "std::vector<int>" au lieu du "void" habituel devant le nom de la fonction signifie que la focntion ci-contre va retourner un vecteur (vector)
 {
 	std::vector<int> randomNumbers;
 
@@ -45,6 +45,6 @@ int main() //this is the entry point, where the program starts.
 	printMsg("hello David!", true);
 
 	// give a sequence of numbers, fint the smallest one.
-	std::vector<int> randomNumbers = generateRandomNumbers(); // Ici le vecteur du nom de randomNumbers obtient le randomNumber par l'appelle de la fonction chargée de générer un randomNumber
+	std::vector<int> randomNumbers = generateRandomNumbers(50); // Ici le vecteur du nom de randomNumbers obtient le randomNumber par l'appelle de la fonction chargée de générer un randomNumber // On ajoute en paramtre de ma focntion le nombre en entier (interger cf plus haut ) de random numbers a génerer
 
 }
