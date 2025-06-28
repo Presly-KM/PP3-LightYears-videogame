@@ -38,13 +38,13 @@ void printMsg(std::string msg, bool newLine)  // the signature of a function
 }
 
 
-
-
-
 int main() //this is the entry point, where the program starts.
 {
 	printHelloWord(); // call the helloWorld smallest one
 
 	printMsg("hello David!", true);
+
+	// give a sequence of numbers, fint the smallest one.
+	std::vector<int> randomNumbers = generateRandomNumbers(); // Ici le vecteur du nom de randomNumbers obtient le randomNumber par l'appelle de la fonction chargée de générer un randomNumber
 
 }
