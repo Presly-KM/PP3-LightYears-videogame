@@ -87,4 +87,11 @@ int main() //this is the entry point, where the program starts.
 	std::cout << "***********************************\n";
 
 	std::vector<int> sorted = sortVector(randomNumbers);  // Ici randomNumbers est le "vectorToSort" placé entre paratenhèse (avec &) dans la ligne 39 
+
+	// templates what is a template to.
+	printMsg<std::string>("hello", true);                  // On appelle ici les différentes versions tirée du template crée
+	printMsg<int>(1, true);
+	printMsg<char>('A', true);
+	printMsg<float>(1.5, true);
+
 }
