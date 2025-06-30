@@ -28,7 +28,8 @@ std::vector<int> generateRandomNumbers(int numberofNumbers)  // Le "std::vector<
 	return randomNumbers;
 }
 
-void printMsg(std::string msg, bool newLine)  // the signature of a function
+template<typename T>
+void printMsg(T msg, bool newLine)  // the signature of a function
 {
 	std::cout << msg;
 	if (newLine)
@@ -36,6 +37,27 @@ void printMsg(std::string msg, bool newLine)  // the signature of a function
 		std::cout << std::endl;
 	}
 }
+
+
+void printMsg(std::string msg, bool newLine)  // De ce que je comprend le template qui a été crée ci-dessus va permettre de créer une fonction/ un composant par défaut dont les arguments (nottament les types) vont pouvoir etre modifié à l"occasion de la création d enivelles version du composant original (cf ligne de code plus haut). En l'occurence ici on remplace le T par un string !
+{
+	std::cout << msg;
+	if (newLine)
+	{
+		std::cout << std::endl;
+	}
+}
+ 
+void printMsg(int msg, bool newLine)       //  Ici on remplace le T (de Template) par un string !
+{
+	std::cout << msg;
+	if (newLine)
+	{
+	   std::cout << std::endl;
+	}
+}
+
+
 std::vector<int> sortVector(std::vector<int>& vectorToSort)
 {
 	for (int i = 0; < vectorToSort.size(); ++i)
